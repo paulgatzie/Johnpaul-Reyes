@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-gray-50;
+}
+
+.navy-gradient {
+  background: linear-gradient(135deg, #0f2447 0%, #1a365d 100%);
+}
+
+.section-padding {
+  @apply py-16 md:py-24;
+}
+
+.hover-scale {
+  @apply transition-transform duration-300 hover:scale-105;
+}
+
+.service-card {
+  @apply bg-white p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg;
+}
+
+.input-field {
+  @apply w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-navy-600;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.7s ease forwards;
+}
